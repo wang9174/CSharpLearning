@@ -15,7 +15,6 @@ namespace ConsoleApplication2
         static void Main(string[] args)
         {
             //添加代码的地方
-            #region 
             //Console.WriteLine("Hello World!");
             //Console.ReadKey();
 
@@ -27,13 +26,6 @@ namespace ConsoleApplication2
             //Console.WriteLine($"{a}+{b}={a + b}");
             //Console.ReadKey();
             #endregion
-
-            int myInteger;
-            string myString;
-            myInteger = 666;
-            myString = "\"myIneger\" is ";
-            Console.WriteLine($"{ myString}{ myInteger}");
-            Console.ReadKey();
 
             int a = 21;
             int b = 10;
