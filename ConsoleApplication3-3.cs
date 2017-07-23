@@ -10,13 +10,12 @@ namespace ConsoleApplication2
      static void Main(string[] args)
      {
        //添加代码的地方
-       int a = 12;
-       int b = 23;
-       Console.WriteLine("12+23=35");
-       Console.WriteLine("{0}+{1}={2}",a, b, a+b);
-       Console.WriteLine($"{a}+{b}={a +b}");
-       Console.ReadKey();
-       Console.ReadKey();
+        int myInteger;
+        string myString;
+        myInteger = 666;
+        myString = "\"myIneger\" is ";
+        Console.WriteLine($"{ myString}{ myInteger}");
+        Console.ReadKey();
      }
    }
 }
