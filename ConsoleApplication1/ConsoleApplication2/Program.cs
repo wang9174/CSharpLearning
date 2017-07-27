@@ -26,7 +26,7 @@ namespace ConsoleApplication1
             //Console.WriteLine("{0}+{1}={2}", a, b, a+b);
             //Console.WriteLine($"{a}+{b}={a + b}");
             //Console.ReadKey();
-            #endregion
+
 
             //int myInteger;
             //string myString;
@@ -34,10 +34,12 @@ namespace ConsoleApplication1
             //myString = "\"myIneger\" is ";
             //Console.WriteLine($"{ myString}{ myInteger}");
             //Console.ReadKey();
+            #endregion
+
 
             string myVal = "wang";
             bool myString;
-            myString = myVal =="Wang";
+            myString = myVal =="Wang"; //当使用<>进行比较时会报错
             Console.WriteLine(myString );
             Console.ReadKey();
         }
