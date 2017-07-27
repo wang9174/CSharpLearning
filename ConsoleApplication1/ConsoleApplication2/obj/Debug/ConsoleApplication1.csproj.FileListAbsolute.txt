@@ -1,0 +1,6 @@
+C:\Users\wang9\Documents\GitHub\CSharpLearning\ConsoleApplication1\ConsoleApplication2\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\wang9\Documents\GitHub\CSharpLearning\ConsoleApplication1\ConsoleApplication2\bin\Debug\ConsoleApplication1.exe
+C:\Users\wang9\Documents\GitHub\CSharpLearning\ConsoleApplication1\ConsoleApplication2\bin\Debug\ConsoleApplication1.pdb
+C:\Users\wang9\Documents\GitHub\CSharpLearning\ConsoleApplication1\ConsoleApplication2\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+C:\Users\wang9\Documents\GitHub\CSharpLearning\ConsoleApplication1\ConsoleApplication2\obj\Debug\ConsoleApplication1.exe
+C:\Users\wang9\Documents\GitHub\CSharpLearning\ConsoleApplication1\ConsoleApplication2\obj\Debug\ConsoleApplication1.pdb
