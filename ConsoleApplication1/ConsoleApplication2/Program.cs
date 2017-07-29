@@ -81,29 +81,43 @@ namespace ConsoleApplication1
             //}
             //WriteLine($"Hello,{name}!");
             //ReadKey();
+
+            //int i = 1; //4.3 do循环
+            //do
+            //{
+            //    WriteLine("{0}", i++);
+            //} while (i <= 10);
+
+            //double balance, interestRate, targetBalance;
+            //WriteLine("What is your current balance?");
+            //balance = ToDouble(ReadLine());
+            //WriteLine(@"What is your current interest rate(in %)?");
+            //interestRate = ToDouble(ReadLine()) / 100.0 + 1;
+            //WriteLine("What balance would you like to have?");
+            //targetBalance = ToDouble(ReadLine());
+            //int totalYear = 0;
+            //do
+            //{
+            //    balance *= interestRate;
+            //    ++totalYear;
+            //}
+            //while (balance < targetBalance);
+            //WriteLine($"In {totalYear} year{(totalYear == 1 ? "" : "s")} you'll have a balance of {balance }.");
+            //ReadKey();
             #endregion
 
-            int i = 1; //4.3 do循环
+            int numbertwo, numberone; //4.3 do循环判定用户输入
             do
             {
-                WriteLine("{0}", i++);
-            } while (i <= 10);
-
-            double balance, interestRate, targetBalance;
-            WriteLine("What is your current balance?");
-            balance = ToDouble(ReadLine());
-            WriteLine(@"What is your current interest rate(in %)?");
-            interestRate = ToDouble(ReadLine()) / 100.0 + 1;
-            WriteLine("What balance would you like to have?");
-            targetBalance = ToDouble(ReadLine());
-            int totalYear = 0;
-            do
-            {
-                balance *= interestRate;
-                ++totalYear;
-            }
-            while (balance < targetBalance);
-            WriteLine($"In {totalYear} year{(totalYear == 1 ? "" : "s")} you'll have a balance of {balance }.");
+                WriteLine("Please enter the first number:");
+                numberone = ToInt32(ReadLine());
+                WriteLine("Please enter the second number:");
+                numbertwo = ToInt32(ReadLine());
+                if (numberone > 10 & numbertwo > 10)
+                    WriteLine($"The first number you enter is {numberone },the second number you enter is{numbertwo }." +
+                        "It's not allowed that both of the two number greater than 10, please try again!");
+            } while (numberone > 10 & numbertwo > 10);
+            WriteLine($"The first number you enter is {numberone },the second number you enter is {numbertwo }.");
             ReadKey();
 
 
