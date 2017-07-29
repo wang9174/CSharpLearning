@@ -104,23 +104,43 @@ namespace ConsoleApplication1
             //while (balance < targetBalance);
             //WriteLine($"In {totalYear} year{(totalYear == 1 ? "" : "s")} you'll have a balance of {balance }.");
             //ReadKey();
+
+            //int numbertwo, numberone; //4.3 do循环判定用户输入
+            //do
+            //{
+            //    WriteLine("Please enter the first number:");
+            //    numberone = ToInt32(ReadLine());
+            //    WriteLine("Please enter the second number:");
+            //    numbertwo = ToInt32(ReadLine());
+            //    if (numberone > 10 & numbertwo > 10)
+            //        WriteLine($"The first number you enter is {numberone },the second number you enter is{numbertwo }." +
+            //            "It's not allowed that both of the two number greater than 10, please try again!");
+            //} while (numberone > 10 & numbertwo > 10);
+            //WriteLine($"The first number you enter is {numberone },the second number you enter is {numbertwo }.");
+            //ReadKey();
             #endregion
 
-            int numbertwo, numberone; //4.3 do循环判定用户输入
-            do
-            {
-                WriteLine("Please enter the first number:");
-                numberone = ToInt32(ReadLine());
-                WriteLine("Please enter the second number:");
-                numbertwo = ToInt32(ReadLine());
-                if (numberone > 10 & numbertwo > 10)
-                    WriteLine($"The first number you enter is {numberone },the second number you enter is{numbertwo }." +
-                        "It's not allowed that both of the two number greater than 10, please try again!");
-            } while (numberone > 10 & numbertwo > 10);
-            WriteLine($"The first number you enter is {numberone },the second number you enter is {numbertwo }.");
+
+
+            short shortrResult, shortVal = 4; //5.1 类型转换
+            int integerVal = 67;
+            long longResult;
+            float floatVal = 10.5F;
+            double doubleResult, doubleVal = 99.999;
+            string stringResult, stringVal = "17";
+            bool boolVal = true;
+            WriteLine("Variable Conversion Examples\n");
+            doubleResult = floatVal * shortVal;
+            WriteLine($"Implicit,-> double: {floatVal } * {shortVal } -> {doubleResult }");
+            shortrResult = (short)floatVal;
+            WriteLine($"Explicit,-> short: {floatVal} -> {shortrResult }");
+            stringResult = Convert.ToString(boolVal) +
+                Convert.ToString(doubleVal);
+            WriteLine($"Explicit, -> string: \"{boolVal }\" + \"{doubleVal }\" -> " +
+                $"{stringResult }");
+            longResult = integerVal + ToInt32(stringVal);
+            WriteLine($"mixed, -> long: {integerVal } + {stringVal } -> {longResult }");
             ReadKey();
-
-
 
         }
     }
