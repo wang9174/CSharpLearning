@@ -43,25 +43,46 @@ namespace ConsoleApplication1
             //myString = myVal =="Wang"; //当使用<>进行比较时会报错
             //Console.WriteLine(myString );
             //Console.ReadKey();
-            
+
+            //string comparison;  //4.2 if语句实例
+            //WriteLine("Enter a Number:");
+            //double var1 = ToDouble(ReadLine());
+            //WriteLine("Enter another Number:");
+            //double var2 = ToDouble(ReadLine());
+            //if (var1 < var2)
+            //    comparison = "less than";
+            //else
+            //{
+            //    if (var1 == var2)
+            //        comparison = "equal to";
+            //    else
+            //        comparison = "greater than";
+            //}
+            //WriteLine($"The first number is {comparison} the second number");
+            //ReadKey();
             #endregion
 
-            string comparison;  //4.2 if语句实例
-            WriteLine("Enter a Number:");
-            double var1 = ToDouble(ReadLine());
-            WriteLine("Enter another Number:");
-            double var2 = ToDouble(ReadLine());
-            if (var1 < var2)
-                comparison = "less than";
-            else
+            const string myName = "benjaming"; //4.2 swich语句实例
+            const string niceName = "andrea";
+            const string sillyName = "ploppy";
+            string name;
+            WriteLine("What is your name?");
+            name = ReadLine();
+            switch (name.ToLower())
             {
-                if (var1 == var2)
-                    comparison = "equal to";
-                else
-                    comparison = "greater than";
+                case myName:
+                    WriteLine("you have the same name as me!");
+                    break;
+                case niceName:
+                    WriteLine("what a nice name you have!");
+                    break;
+                case sillyName:
+                    WriteLine("That's a very silly name.");
+                    break;
             }
-            WriteLine($"The first number is {comparison} the second number");
+            WriteLine($"Hello,{name}!");
             ReadKey();
+
 
         }
     }
