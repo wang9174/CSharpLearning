@@ -60,28 +60,52 @@ namespace ConsoleApplication1
             //}
             //WriteLine($"The first number is {comparison} the second number");
             //ReadKey();
+
+            //const string myName = "benjaming"; //4.2 swich语句实例
+            //const string niceName = "andrea";
+            //const string sillyName = "ploppy";
+            //string name;
+            //WriteLine("What is your name?");
+            //name = ReadLine();
+            //switch (name.ToLower())
+            //{
+            //    case myName:
+            //        WriteLine("you have the same name as me!");
+            //        break;
+            //    case niceName:
+            //        WriteLine("what a nice name you have!");
+            //        break;
+            //    case sillyName:
+            //        WriteLine("That's a very silly name.");
+            //        break;
+            //}
+            //WriteLine($"Hello,{name}!");
+            //ReadKey();
             #endregion
 
-            const string myName = "benjaming"; //4.2 swich语句实例
-            const string niceName = "andrea";
-            const string sillyName = "ploppy";
-            string name;
-            WriteLine("What is your name?");
-            name = ReadLine();
-            switch (name.ToLower())
+            int i = 1; //4.3 do循环
+            do
             {
-                case myName:
-                    WriteLine("you have the same name as me!");
-                    break;
-                case niceName:
-                    WriteLine("what a nice name you have!");
-                    break;
-                case sillyName:
-                    WriteLine("That's a very silly name.");
-                    break;
+                WriteLine("{0}", i++);
+            } while (i <= 10);
+
+            double balance, interestRate, targetBalance;
+            WriteLine("What is your current balance?");
+            balance = ToDouble(ReadLine());
+            WriteLine(@"What is your current interest rate(in %)?");
+            interestRate = ToDouble(ReadLine()) / 100.0 + 1;
+            WriteLine("What balance would you like to have?");
+            targetBalance = ToDouble(ReadLine());
+            int totalYear = 0;
+            do
+            {
+                balance *= interestRate;
+                ++totalYear;
             }
-            WriteLine($"Hello,{name}!");
+            while (balance < targetBalance);
+            WriteLine($"In {totalYear} year{(totalYear == 1 ? "" : "s")} you'll have a balance of {balance }.");
             ReadKey();
+
 
 
         }
