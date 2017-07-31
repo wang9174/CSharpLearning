@@ -57,10 +57,13 @@ namespace ConsoleApplication1
         //}
 
 
-        delegate double ProcessDelegate(double param1, double param2);
-        static double Multiply(double param1, double param2) => param1 * param2;
-        static double Divide(double param1, double param2) => param1 / param2;
+        //delegate double ProcessDelegate(double param1, double param2);
+        //static double Multiply(double param1, double param2) => param1 * param2;
+        //static double Divide(double param1, double param2) => param1 / param2;
 
+
+
+        delegate String GetString();
         static void Main(string[] args)
         {
             //添加代码的地方
@@ -329,21 +332,34 @@ namespace ConsoleApplication1
             //    WriteLine($"{text}");
             //}
             //WriteLine($"Last text output in loop: {text}");
+
+
+            //ProcessDelegate Process; //6.2 使用委托调用函数
+            //WriteLine("Enter 2 number separated with a comma:");
+            //String input = ReadLine();
+            //int commaPos = input.IndexOf(",");   //常出现忘记切换为英文输入法，导致无法找到","这个英文逗号，从而commaPos为-1，报错：取字符串长度不能小于0
+            //double param1 = ToDouble(input.Substring(0, commaPos));
+            //double param2 = ToDouble(input.Substring(commaPos + 1, input.Length - commaPos - 1));
+            //WriteLine("Enter M to multiply or D to divide:");
+            //input = ReadLine();
+            //if (input.ToLower() == "m")
+            //    Process = new ProcessDelegate(Multiply);
+            //else //if (input.ToLower() == "d")  //当这里采用else if,会出现Process没有初始化的可能情况，从而报错
+            //    Process = new ProcessDelegate(Divide);
+            //WriteLine($"The Answer: {Process(param1, param2)}");
+            //ReadKey();
             #endregion
 
-            ProcessDelegate Process; //6.2 使用委托调用函数
-            WriteLine("Enter 2 number separated with a comma:");
-            String input = ReadLine();
-            int commaPos = input.IndexOf(",");   //常出现忘记切换为英文输入法，导致无法找到","这个英文逗号，从而commaPos为-1，报错：取字符串长度不能小于0
-            double param1 = ToDouble(input.Substring(0, commaPos));
-            double param2 = ToDouble(input.Substring(commaPos + 1, input.Length - commaPos - 1));
-            WriteLine("Enter M to multiply or D to divide:");
-            input = ReadLine();
-            if (input.ToLower() == "m")
-                Process = new ProcessDelegate(Multiply);
-            else //if (input.ToLower() == "d")  //当这里采用else if,会出现Process没有初始化的可能情况，从而报错
-                Process = new ProcessDelegate(Divide);
-            WriteLine($"The Answer: {Process(param1, param2)}");
+            String First = args[0]; //6.7 章节练习1
+            int Second = Convert.ToInt32(args[1]);
+            WriteLine($"The first arguments is : {First} \nThe second arguments is: {Second }");
+            ReadKey();
+
+            GetString GetIt; //6.7 章节练习2
+            GetIt = new GetString(ReadLine);
+            WriteLine("Now,Say Something:");
+            String Input = GetIt();
+            WriteLine($"What You Say Is: {Input}");
             ReadKey();
 
 
