@@ -200,15 +200,23 @@ namespace ConsoleApplication1
             //    WriteLine("{0}", high);
             //}
             //ReadKey();
+
+
+            //int[][] divisors1To10 = { new int[] { 1, 2 }, new int[] { 3 }, new int[] { 4, 5, 6 }, new int[] { 7, 8 }, new int[] { 9 } }; //5.2.3 数组的数组
+            //foreach (int[] divisor in divisors1To10)
+            //{
+            //    foreach (int div in divisor)
+            //    {
+            //        WriteLine(div);
+            //    }
+            //}
+            //ReadKey();
             #endregion
 
-            int[][] divisors1To10 = { new int[] { 1, 2 }, new int[] { 3 }, new int[] { 4, 5, 6 }, new int[] { 7, 8 }, new int[] { 9 } }; //5.2.3 数组的数组
-            foreach (int[] divisor in divisors1To10)
+            string mystring = "A string"; //5.3 字符串是字符的只读数组
+            for (int i = 0; i < mystring.Length; i++)
             {
-                foreach (int div in divisor)
-                {
-                    WriteLine(div);
-                }
+                WriteLine(mystring[i]);
             }
             ReadKey();
 
