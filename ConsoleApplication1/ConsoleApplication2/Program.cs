@@ -186,18 +186,29 @@ namespace ConsoleApplication1
             //    WriteLine(friendName[i]);
             //}
             //ReadKey();
+
+
+            //string[] friendName = new string[3] { "Hosptal", "Hotel", "Captaion" };  //5.2.3 foreach循环
+            //foreach (string name in friendName)
+            //{
+            //    WriteLine(name);
+            //}
+
+            //double[,] hillHeight = { { 1, 2, 3, 4 }, { 2, 3, 4, 5 }, { 3, 4, 5, 6 } };  //5.2.3 多维数组
+            //foreach (double high in hillHeight)
+            //{
+            //    WriteLine("{0}", high);
+            //}
+            //ReadKey();
             #endregion
 
-            string[] friendName = new string[3] { "Hosptal", "Hotel", "Captaion" };  //5.2.3 foreach循环
-            foreach (string name in friendName)
+            int[][] divisors1To10 = { new int[] { 1, 2 }, new int[] { 3 }, new int[] { 4, 5, 6 }, new int[] { 7, 8 }, new int[] { 9 } }; //5.2.3 数组的数组
+            foreach (int[] divisor in divisors1To10)
             {
-                WriteLine(name);
-            }
-
-            double[,] hillHeight = { { 1, 2, 3, 4 }, { 2, 3, 4, 5 }, { 3, 4, 5, 6 } };  //5.2.3 多维数组
-            foreach (double high in hillHeight)
-            {
-                WriteLine("{0}", high);
+                foreach (int div in divisor)
+                {
+                    WriteLine(div);
+                }
             }
             ReadKey();
 
