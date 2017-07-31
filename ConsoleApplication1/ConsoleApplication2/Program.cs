@@ -11,6 +11,14 @@ using System.Threading.Tasks;
 namespace ConsoleApplication1
 {
     //枚举，结构定义区
+
+    enum orientation : byte
+    {
+        north = 1,
+        south = 2,
+        east = 3,
+        west = 4
+    }
     class Program
     {
         //定义函数区
@@ -118,28 +126,33 @@ namespace ConsoleApplication1
             //} while (numberone > 10 & numbertwo > 10);
             //WriteLine($"The first number you enter is {numberone },the second number you enter is {numbertwo }.");
             //ReadKey();
+
+
+            //short shortrResult, shortVal = 4; //5.1 类型转换
+            //int integerVal = 67;
+            //long longResult;
+            //float floatVal = 10.5F;
+            //double doubleResult, doubleVal = 99.999;
+            //string stringResult, stringVal = "17";
+            //bool boolVal = true;
+            //WriteLine("Variable Conversion Examples\n");
+            //doubleResult = floatVal * shortVal;
+            //WriteLine($"Implicit,-> double: {floatVal } * {shortVal } -> {doubleResult }");
+            //shortrResult = (short)floatVal;
+            //WriteLine($"Explicit,-> short: {floatVal} -> {shortrResult }");
+            //stringResult = Convert.ToString(boolVal) +
+            //    Convert.ToString(doubleVal);
+            //WriteLine($"Explicit, -> string: \"{boolVal }\" + \"{doubleVal }\" -> " +
+            //    $"{stringResult }");
+            //longResult = integerVal + ToInt32(stringVal);
+            //WriteLine($"mixed, -> long: {integerVal } + {stringVal } -> {longResult }");
+            //ReadKey();
             #endregion
 
 
 
-            short shortrResult, shortVal = 4; //5.1 类型转换
-            int integerVal = 67;
-            long longResult;
-            float floatVal = 10.5F;
-            double doubleResult, doubleVal = 99.999;
-            string stringResult, stringVal = "17";
-            bool boolVal = true;
-            WriteLine("Variable Conversion Examples\n");
-            doubleResult = floatVal * shortVal;
-            WriteLine($"Implicit,-> double: {floatVal } * {shortVal } -> {doubleResult }");
-            shortrResult = (short)floatVal;
-            WriteLine($"Explicit,-> short: {floatVal} -> {shortrResult }");
-            stringResult = Convert.ToString(boolVal) +
-                Convert.ToString(doubleVal);
-            WriteLine($"Explicit, -> string: \"{boolVal }\" + \"{doubleVal }\" -> " +
-                $"{stringResult }");
-            longResult = integerVal + ToInt32(stringVal);
-            WriteLine($"mixed, -> long: {integerVal } + {stringVal } -> {longResult }");
+            orientation myDirction = orientation.north;
+            WriteLine($"MyDriction is {myDirction }");
             ReadKey();
 
         }
