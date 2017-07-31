@@ -211,12 +211,23 @@ namespace ConsoleApplication1
             //    }
             //}
             //ReadKey();
+
+
+            //string mystring = "A string"; //5.3 字符串是字符的只读数组
+            //for (int i = 0; i < mystring.Length; i++)
+            //{
+            //    WriteLine(mystring[i]);
+            //}
+            //ReadKey();
             #endregion
 
-            string mystring = "A string"; //5.3 字符串是字符的只读数组
-            for (int i = 0; i < mystring.Length; i++)
+            string mystring = "This is a test."; //5.3 字符串的拆分
+            char[] separator = { ' ' };
+            string[] myWord;
+            myWord = mystring.Split(separator);
+            foreach (string word in myWord)
             {
-                WriteLine(mystring[i]);
+                WriteLine($"{word}");
             }
             ReadKey();
 
