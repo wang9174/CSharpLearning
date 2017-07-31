@@ -5,6 +5,7 @@ using System.Text;
 using static System.Console;
 using static System.Convert;
 using System.Threading.Tasks;
+using System.Diagnostics;
 //声明区
 
 
@@ -63,7 +64,46 @@ namespace ConsoleApplication1
 
 
 
-        delegate String GetString();
+        //delegate String GetString();
+
+
+        static int Maxima(int[] integers, out int[] indices)
+        {
+            Debug.WriteLine("Maximum value search started.");
+            indices = new int[1];
+            int maxVal = integers[0];
+            indices[0] = 0;
+            int count = 1;
+            Debug.WriteLine($"Maximum value initialized to {maxVal }, at element index 0.");
+            for (int i = 1; i < integers.Length; i++)
+            {
+                Debug.WriteLine($"Now looking at element at index {i}.");
+                if (integers[i] > maxVal)
+                {
+                    maxVal = integers[i];
+                    count = 1;
+                    indices = new int[1];
+                    indices[0] = i;
+                    Debug.WriteLine($"New maximum found.New value is {maxVal },at element index {i }.");
+
+                }
+                else
+                {
+                    if (integers[i] == maxVal)
+                    {
+                        count = count + 1;    //count += 1
+                        int[] oldIndices = indices;
+                        indices = new int[count];
+                        oldIndices.CopyTo(indices, 0);
+                        indices[count - 1] = i;
+                        Debug.WriteLine($"Duplicate maximum found at element index {i}.");
+                    }
+                }
+            }
+            Trace.WriteLine($"Maximum value {maxVal } founf, with {count } occurrences.");
+            Debug.WriteLine("Maximum value search completed.");
+            return maxVal;
+        }
         static void Main(string[] args)
         {
             //添加代码的地方
@@ -348,20 +388,31 @@ namespace ConsoleApplication1
             //    Process = new ProcessDelegate(Divide);
             //WriteLine($"The Answer: {Process(param1, param2)}");
             //ReadKey();
+
+
+            //String First = args[0]; //6.7 章节练习1
+            //int Second = Convert.ToInt32(args[1]);
+            //WriteLine($"The first arguments is : {First} \nThe second arguments is: {Second }");
+            //ReadKey();
+
+            //GetString GetIt; //6.7 章节练习2
+            //GetIt = new GetString(ReadLine);
+            //WriteLine("Now,Say Something:");
+            //String Input = GetIt();
+            //WriteLine($"What You Say Is: {Input}");
+            //ReadKey();
             #endregion
 
-            String First = args[0]; //6.7 章节练习1
-            int Second = Convert.ToInt32(args[1]);
-            WriteLine($"The first arguments is : {First} \nThe second arguments is: {Second }");
-            ReadKey();
 
-            GetString GetIt; //6.7 章节练习2
-            GetIt = new GetString(ReadLine);
-            WriteLine("Now,Say Something:");
-            String Input = GetIt();
-            WriteLine($"What You Say Is: {Input}");
+            int[] testArray = { 1, 2, 3, 4, 5, 6, 7, 7, 7 }; //7.1 输出到output窗口
+            int[] maxValIndices;
+            int maxVal = Maxima(testArray, out maxValIndices);
+            WriteLine($"Maximum value {maxVal } found at element indices:");
+            foreach (int index in maxValIndices)
+            {
+                WriteLine(index);
+            }
             ReadKey();
-
 
 
 
