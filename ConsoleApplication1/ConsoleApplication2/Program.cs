@@ -28,6 +28,12 @@ namespace ConsoleApplication1
     class Program
     {
         //定义函数区
+
+        static void Write()
+        {
+            WriteLine("Text output from function.");
+        }
+
         static void Main(string[] args)
         {
             //添加代码的地方
@@ -257,19 +263,23 @@ namespace ConsoleApplication1
             //    WriteLine(show);
             //}
             //ReadKey();
+
+
+            //WriteLine("Now,Say Something"); //5.3 字符串的单词提取
+            //String myString = Convert.ToString(ReadLine());
+            //Char[] separator = { ' ', ',', '.' };
+            //String[] myWord = myString.Split(separator);
+            //String finalWord = "";
+            //for (int i = 0; i < myWord.Length; i++)
+            //{
+            //    myWord[i] = $"\"{myWord[i]}\"";
+            //    finalWord = finalWord + myWord[i] + " ";
+            //}
+            //WriteLine(finalWord);
+            //ReadKey();
             #endregion
 
-            WriteLine("Now,Say Something"); //5.3 字符串的单词提取
-            String myString = Convert.ToString(ReadLine());
-            Char[] separator = { ' ', ',', '.' };
-            String[] myWord = myString.Split(separator);
-            String finalWord = "";
-            for (int i = 0; i < myWord.Length; i++)
-            {
-                myWord[i] = $"\"{myWord[i]}\"";
-                finalWord = finalWord + myWord[i] + " ";
-            }
-            WriteLine(finalWord);
+            Write(); //6.1 使用基本函数
             ReadKey();
 
 
