@@ -240,25 +240,39 @@ namespace ConsoleApplication1
             //    WriteLine(mychar[i]);
             //}
             //ReadKey();
+
+
+            //WriteLine("Now,Say Something"); //5.3 字符串的搜索替换
+            //string mystring = Convert.ToString(ReadLine());
+            //char[] separator = { ' ' };
+            //string[] myWord;
+            //myWord = mystring.Split(separator);
+            //for (int i = 0; i < myWord.Length; i++)
+            //{
+            //    if (myWord[i].ToLower() == "yes")
+            //        myWord[i] = "no";
+            //}
+            //foreach (string show in myWord)
+            //{
+            //    WriteLine(show);
+            //}
+            //ReadKey();
             #endregion
 
-
-
-            WriteLine("Now,Say Something"); //5.3 字符串的搜索替换
-            string mystring = Convert.ToString(ReadLine());
-            char[] separator = { ' ' };
-            string[] myWord;
-            myWord = mystring.Split(separator);
+            WriteLine("Now,Say Something"); //5.3 字符串的单词提取
+            String myString = Convert.ToString(ReadLine());
+            Char[] separator = { ' ', ',', '.' };
+            String[] myWord = myString.Split(separator);
+            String finalWord = "";
             for (int i = 0; i < myWord.Length; i++)
             {
-                if (myWord[i].ToLower() == "yes")
-                    myWord[i] = "no";
+                myWord[i] = $"\"{myWord[i]}\"";
+                finalWord = finalWord + myWord[i] + " ";
             }
-            foreach (string show in myWord)
-            {
-                WriteLine(show);
-            }
+            WriteLine(finalWord);
             ReadKey();
+
+
 
 
         }
