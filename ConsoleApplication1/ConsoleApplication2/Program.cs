@@ -176,14 +176,28 @@ namespace ConsoleApplication1
             //WriteLine($"myRoute specifies a direction of {myRoute.direction} " +
             //    $"and a distance of {myRoute.distance}");
             //ReadKey();
+
+
+            //string[] friendName = { "Today", "Hotel", "Shine" }; //5.2.3 使用数组
+            //int i;
+            //WriteLine($"Here are {friendName.Length} of your friendName");
+            //for (i = 0; i < friendName.Length; i++)
+            //{
+            //    WriteLine(friendName[i]);
+            //}
+            //ReadKey();
             #endregion
 
-            string[] friendName = { "Today", "Hotel", "Shine" }; //5.2.3 使用数组
-            int i;
-            WriteLine($"Here are {friendName.Length} of your friendName");
-            for (i = 0; i < friendName.Length; i++)
+            string[] friendName = new string[3] { "Hosptal", "Hotel", "Captaion" };  //5.2.3 foreach循环
+            foreach (string name in friendName)
             {
-                WriteLine(friendName[i]);
+                WriteLine(name);
+            }
+
+            double[,] hillHeight = { { 1, 2, 3, 4 }, { 2, 3, 4, 5 }, { 3, 4, 5, 6 } };  //5.2.3 多维数组
+            foreach (double high in hillHeight)
+            {
+                WriteLine("{0}", high);
             }
             ReadKey();
 
