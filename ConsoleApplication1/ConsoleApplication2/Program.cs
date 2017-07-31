@@ -34,17 +34,27 @@ namespace ConsoleApplication1
         //    WriteLine("Text output from function.");
         //}
 
-        static int MaxValue(int[] intArray)
-        {
-            int maxVal = intArray[0];
-            for (int i = 1; i < intArray.Length; i++)
-            {
-                if (intArray[i] > maxVal)
-                    maxVal = intArray[i];
-            }
-            return maxVal;
-        }
+        //static int MaxValue(int[] intArray)
+        //{
+        //    int maxVal = intArray[0];
+        //    for (int i = 1; i < intArray.Length; i++)
+        //    {
+        //        if (intArray[i] > maxVal)
+        //            maxVal = intArray[i];
+        //    }
+        //    return maxVal;
+        //}
 
+
+        static int sumVals(params int[] vals)
+        {
+            int sum = 0;
+            foreach (int number in vals)
+            {
+                sum += number;
+            }
+            return sum;
+        }
         static void Main(string[] args)
         {
             //添加代码的地方
@@ -292,12 +302,17 @@ namespace ConsoleApplication1
 
             //Write(); //6.1 使用基本函数
             //ReadKey();
+
+
+            //int[] myArray = { 1, 2, 3, 4, 5, 6, 7, 8, 9 }; //6.1.2 通过函数交换数据
+            //int maxVal = MaxValue(myArray);
+            //WriteLine($"The max Value in myArray is {maxVal}");
+            //ReadKey();
             #endregion
 
 
-            int[] myArray = { 1, 2, 3, 4, 5, 6, 7, 8, 9 }; //6.1.2 通过函数交换数据
-            int maxVal = MaxValue(myArray);
-            WriteLine($"The max Value in myArray is {maxVal}");
+            int sum = sumVals(1, 2, 3, 4, 5, 6); //6.1.2 通过函数交换数据2
+            WriteLine($"Summed Values = {sum}");
             ReadKey();
 
 
