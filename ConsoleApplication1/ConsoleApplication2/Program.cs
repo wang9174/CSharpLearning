@@ -230,17 +230,35 @@ namespace ConsoleApplication1
             //    WriteLine($"{word}");
             //}
             //ReadKey();
+
+
+            //WriteLine("Now,Say Something"); //5.3 字符串转换成字符的数组
+            //String mystring = Convert.ToString(ReadLine());
+            //char[] mychar = mystring.ToCharArray();
+            //for (int i = mystring.Length - 1; i >= 0; i--)
+            //{
+            //    WriteLine(mychar[i]);
+            //}
+            //ReadKey();
             #endregion
 
-            WriteLine("Now,Say Something"); //5.3 字符串转换成字符的数组
-            String mystring = Convert.ToString(ReadLine());
-            char[] mychar = mystring.ToCharArray();
-            for (int i = mystring.Length - 1; i >= 0; i--)
+
+
+            WriteLine("Now,Say Something"); //5.3 字符串的搜索替换
+            string mystring = Convert.ToString(ReadLine());
+            char[] separator = { ' ' };
+            string[] myWord;
+            myWord = mystring.Split(separator);
+            for (int i = 0; i < myWord.Length; i++)
             {
-                WriteLine(mychar[i]);
+                if (myWord[i].ToLower() == "yes")
+                    myWord[i] = "no";
+            }
+            foreach (string show in myWord)
+            {
+                WriteLine(show);
             }
             ReadKey();
-
 
 
         }
