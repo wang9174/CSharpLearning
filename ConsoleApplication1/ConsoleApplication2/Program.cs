@@ -29,9 +29,20 @@ namespace ConsoleApplication1
     {
         //定义函数区
 
-        static void Write()
+        //static void Write()
+        //{
+        //    WriteLine("Text output from function.");
+        //}
+
+        static int MaxValue(int[] intArray)
         {
-            WriteLine("Text output from function.");
+            int maxVal = intArray[0];
+            for (int i = 1; i < intArray.Length; i++)
+            {
+                if (intArray[i] > maxVal)
+                    maxVal = intArray[i];
+            }
+            return maxVal;
         }
 
         static void Main(string[] args)
@@ -277,11 +288,17 @@ namespace ConsoleApplication1
             //}
             //WriteLine(finalWord);
             //ReadKey();
+
+
+            //Write(); //6.1 使用基本函数
+            //ReadKey();
             #endregion
 
-            Write(); //6.1 使用基本函数
-            ReadKey();
 
+            int[] myArray = { 1, 2, 3, 4, 5, 6, 7, 8, 9 }; //6.1.2 通过函数交换数据
+            int maxVal = MaxValue(myArray);
+            WriteLine($"The max Value in myArray is {maxVal}");
+            ReadKey();
 
 
 
