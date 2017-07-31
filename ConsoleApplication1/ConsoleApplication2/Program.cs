@@ -46,15 +46,18 @@ namespace ConsoleApplication1
         //}
 
 
-        static int sumVals(params int[] vals)
-        {
-            int sum = 0;
-            foreach (int number in vals)
-            {
-                sum += number;
-            }
-            return sum;
-        }
+        //static int sumVals(params int[] vals)
+        //{
+        //    int sum = 0;
+        //    foreach (int number in vals)
+        //    {
+        //        sum += number;
+        //    }
+        //    return sum;
+        //}
+
+
+
         static void Main(string[] args)
         {
             //添加代码的地方
@@ -308,12 +311,22 @@ namespace ConsoleApplication1
             //int maxVal = MaxValue(myArray);
             //WriteLine($"The max Value in myArray is {maxVal}");
             //ReadKey();
+
+
+            //int sum = sumVals(1, 2, 3, 4, 5, 6); //6.1.2 通过函数交换数据2
+            //WriteLine($"Summed Values = {sum}");
+            //ReadKey();
             #endregion
 
 
-            int sum = sumVals(1, 2, 3, 4, 5, 6); //6.1.2 通过函数交换数据2
-            WriteLine($"Summed Values = {sum}");
-            ReadKey();
+            int i;  //6.2 变量的初始化位置
+            String text = ""; //若在循环里面进行声明将报错
+            for (i = 0; i < 10; i++)
+            {
+                text = "Line" + Convert.ToString(i);
+                WriteLine($"{text}");
+            }
+            WriteLine($"Last text output in loop: {text}");
 
 
 
