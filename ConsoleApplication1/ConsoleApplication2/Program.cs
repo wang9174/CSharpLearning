@@ -219,15 +219,25 @@ namespace ConsoleApplication1
             //    WriteLine(mystring[i]);
             //}
             //ReadKey();
+
+
+            //string mystring = "This is a test."; //5.3 字符串的拆分
+            //char[] separator = { ' ' };
+            //string[] myWord;
+            //myWord = mystring.Split(separator);
+            //foreach (string word in myWord)
+            //{
+            //    WriteLine($"{word}");
+            //}
+            //ReadKey();
             #endregion
 
-            string mystring = "This is a test."; //5.3 字符串的拆分
-            char[] separator = { ' ' };
-            string[] myWord;
-            myWord = mystring.Split(separator);
-            foreach (string word in myWord)
+            WriteLine("Now,Say Something"); //5.3 字符串转换成字符的数组
+            String mystring = Convert.ToString(ReadLine());
+            char[] mychar = mystring.ToCharArray();
+            for (int i = mystring.Length - 1; i >= 0; i--)
             {
-                WriteLine($"{word}");
+                WriteLine(mychar[i]);
             }
             ReadKey();
 
