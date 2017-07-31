@@ -12,19 +12,19 @@ namespace ConsoleApplication1
 {
     //枚举，结构定义区
 
-    enum orientation : byte
-    {
-        north = 1,
-        south = 2,
-        east = 3,
-        west = 4
-    }
+    //enum orientation : byte
+    //{
+    //    north = 1,
+    //    south = 2,
+    //    east = 3,
+    //    west = 4
+    //}
 
-    struct route
-    {
-        public orientation direction;
-        public Double distance;
-    }
+    //struct route
+    //{
+    //    public orientation direction;
+    //    public Double distance;
+    //}
     class Program
     {
         //定义函数区
@@ -158,23 +158,33 @@ namespace ConsoleApplication1
             //orientation myDirction = orientation.north; //5.2 使用枚举
             //WriteLine($"MyDriction is {myDirction }");
             //ReadKey();
+
+
+            //route myRoute; //5.2.2 使用结构
+            //int myDirection = -1;
+            //double myDistance;
+            //WriteLine("1) North \n2) South \n3) East \n4) West");
+            //do
+            //{
+            //    WriteLine("Select a direction");
+            //    myDirection = ToInt32(ReadLine());
+            //} while (myDirection < 1 | myDirection > 4);
+            //WriteLine("Input a distance:");
+            //myDistance = ToDouble(ReadLine());
+            //myRoute.direction = (orientation)myDirection;
+            //myRoute.distance = myDistance;
+            //WriteLine($"myRoute specifies a direction of {myRoute.direction} " +
+            //    $"and a distance of {myRoute.distance}");
+            //ReadKey();
             #endregion
 
-            route myRoute; //5.2.2 使用结构
-            int myDirection = -1;
-            double myDistance;
-            WriteLine("1) North \n2) South \n3) East \n4) West");
-            do
+            string[] friendName = { "Today", "Hotel", "Shine" }; //5.2.3 使用数组
+            int i;
+            WriteLine($"Here are {friendName.Length} of your friendName");
+            for (i = 0; i < friendName.Length; i++)
             {
-                WriteLine("Select a direction");
-                myDirection = ToInt32(ReadLine());
-            } while (myDirection < 1 | myDirection > 4);
-            WriteLine("Input a distance:");
-            myDistance = ToDouble(ReadLine());
-            myRoute.direction = (orientation)myDirection;
-            myRoute.distance = myDistance;
-            WriteLine($"myRoute specifies a direction of {myRoute.direction} " +
-                $"and a distance of {myRoute.distance}");
+                WriteLine(friendName[i]);
+            }
             ReadKey();
 
 
